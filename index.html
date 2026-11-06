@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover workshops, concerts, conferences and creative experiences with REVELIA.">
+  <title>REVELIA — Find your next experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span> Your next great experience is just around the corner <span class="announcement-arrow">↗</span></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="REVELIA home"><span class="brand-mark">R</span><span>REVELIA</span></a>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="#home">Discover</a><a href="#events">Explore events</a><a href="#profile">My profile</a><a href="#about">About us</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle light and dark mode" title="Toggle theme">☼</button>
+      <a class="button button-dark header-cta" href="#events">Find an event <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> MAKE ROOM FOR SOMETHING NEW</div>
+        <h1>Life happens<br>when you <span class="highlight">show up.</span></h1>
+        <p class="hero-text">Discover experiences that spark ideas, bring people together, and turn an ordinary day into a story worth telling.</p>
+        <div class="hero-buttons"><a class="button button-primary" href="#events">Explore events <span>↗</span></a><a class="text-link" href="#about">How it works <span>→</span></a></div>
+        <div class="social-proof"><div class="avatar-stack"><span>J</span><span>A</span><span>M</span><span>+</span></div><div><strong>2,400+ curious minds</strong><small>finding their next thing</small></div><div class="proof-stars">★★★★★</div></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-image-main"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1100&q=85" alt="Crowd enjoying a live music event"></div>
+        <div class="floating-note note-top"><span class="note-icon">✦</span><span><strong>Experiences that matter</strong><small>Curated for curious people</small></span></div>
+        <div class="floating-note note-bottom"><div class="mini-calendar">NOV<br><strong>14</strong></div><span><strong>Creative minds meet</strong><small>Chennai · 6:00 PM</small></span><span class="note-arrow">↗</span></div>
+        <div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✦</div>
+      </div>
+      <div class="hero-bottom-label"><span>01 / DISCOVER</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="stats-strip"><div><strong>50+</strong><span>Curated experiences</span></div><div><strong>12</strong><span>Event categories</span></div><div><strong>100%</strong><span>Good-vibes guarantee</span></div><div class="stats-note">Less scrolling.<br><em>More living.</em></div></section>
+
+    <section class="events-section section-wrap" id="events">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> THE GOOD STUFF</div><h2>Find your <span class="highlight">next thing.</span></h2><p class="section-subtitle">From big ideas to unforgettable nights, there's a place for you.</p></div>
+        <div class="events-count"><span class="count-dot"></span> <span id="eventCount">06</span> EVENTS TO EXPLORE</div>
+      </div>
+      <div class="search-filter-row">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search events, places, interests..." aria-label="Search events"><kbd>⌘ K</kbd></label>
+        <div class="filter-list" id="filterList" aria-label="Filter events by category">
+          <button class="filter-chip active" data-category="All">All events <span>06</span></button>
+          <button class="filter-chip" data-category="Technology">Technology</button>
+          <button class="filter-chip" data-category="Music">Music</button>
+          <button class="filter-chip" data-category="Art & Design">Art & Design</button>
+          <button class="filter-chip" data-category="Wellness">Wellness</button>
+          <button class="filter-chip" data-category="Learning">Learning</button>
+        </div>
+      </div>
+      <div class="event-grid" id="eventGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>No events found</h3><p>Try another keyword or choose a different category.</p><button class="button button-dark" id="resetFilters">Reset filters</button></div>
+    </section>
+
+    <section class="profile-section section-wrap" id="profile">
+      <div class="section-heading profile-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR REVELIA SPACE</div><h2>Your profile.<br><span class="highlight">Your experiences.</span></h2><p class="section-subtitle">Keep your details up to date and see every event you've joined.</p></div>
+        <div class="profile-actions"><span class="profile-status-dot"></span><span id="profileStatus">LOCAL PROFILE</span></div>
+      </div>
+      <div class="profile-lookup" id="profileLookup">
+        <div><strong>Already registered with REVELIA?</strong><p>Enter the email address you used while registering to find your profile and event registrations.</p></div>
+        <form id="profileLookupForm"><label class="sr-only" for="profileLookupEmail">Registration email address</label><input id="profileLookupEmail" type="email" placeholder="you@example.com" required><button class="button button-dark" type="submit">Find my profile <span>↗</span></button></form>
+      </div>
+      <div class="profile-layout" id="profileLayout" hidden>
+        <article class="profile-card">
+          <div class="profile-card-top"><div class="profile-avatar" id="profileAvatar">R</div><div><span class="profile-overline">MEMBER PROFILE</span><h3 id="profileDisplayName">Your name</h3><p id="profileDisplayEmail">you@example.com</p></div></div>
+          <div class="profile-details" id="profileDetails"></div>
+          <button class="button button-primary profile-edit-button" id="editProfileButton" type="button">Edit profile <span>↗</span></button>
+          <form id="profileEditForm" class="profile-edit-form" hidden novalidate>
+            <label for="profileName">Full name</label><input id="profileName" name="name" type="text" minlength="2" required>
+            <label for="profileEmail">Email address</label><input id="profileEmail" name="email" type="email" required>
+            <label for="profilePhone">Phone number</label><input id="profilePhone" name="phone" type="tel" inputmode="numeric" placeholder="10-digit mobile number" required>
+            <label for="profileBio">About you</label><textarea id="profileBio" name="bio" rows="3" maxlength="240" placeholder="Tell us a little about yourself..."></textarea>
+            <p class="profile-form-error" id="profileFormError" role="alert"></p>
+            <div class="profile-form-actions"><button class="button button-primary" type="submit">Save changes</button><button class="button button-outline" id="cancelProfileEdit" type="button">Cancel</button></div>
+          </form>
+        </article>
+        <section class="registered-events-panel"><div class="registered-events-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span> YOUR ACTIVITY</div><h3>Registered events</h3></div><span class="registration-count" id="registrationCount">0 EVENTS</span></div><div class="registered-events-list" id="registeredEventsList"></div></section>
+      </div>
+      <div class="profile-empty" id="profileEmpty" hidden><span>✳</span><h3>No profile found yet</h3><p>Register for an event using this email address, or check that you entered the same email used during registration.</p><button class="button button-dark" id="profileTryAgain" type="button">Try another email</button></div>
+    </section>
+
+    <section class="feature-band section-wrap" id="about">
+      <div class="feature-art"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=85" alt="Friends connecting at an event"><div class="feature-stamp">GOOD<br>PEOPLE.<br>GOOD<br>ENERGY.</div></div>
+      <div class="feature-copy"><div class="eyebrow"><span class="eyebrow-line"></span> MORE THAN A CALENDAR</div><h2>Make memories.<br><span class="highlight">Not just plans.</span></h2><p>We believe the best things happen when you step out of your routine. REVELIA brings together the experiences, people and places that make life feel a little bigger.</p><div class="feature-points"><div><span>01</span><div><strong>Find your people</strong><p>Meet a community that shares your curiosity.</p></div></div><div><span>02</span><div><strong>Try something different</strong><p>Explore new interests, one event at a time.</p></div></div><div><span>03</span><div><strong>Show up with confidence</strong><p>Simple details and easy registration, all in one place.</p></div></div></div><a class="button button-primary" href="#events">Find your experience <span>↗</span></a></div>
+    </section>
+
+    <section class="newsletter section-wrap"><div><div class="eyebrow"><span class="eyebrow-line"></span> THE WEEKEND EDIT</div><h2>Good things are<br>on the <span class="highlight">way.</span></h2><p>Keep an eye on the experiences worth leaving home for.</p></div><form id="newsletterForm" class="newsletter-form"><label for="newsletterEmail">Your email address</label><div class="newsletter-input"><input id="newsletterEmail" type="email" placeholder="you@example.com" required><button aria-label="Subscribe">↗</button></div><small id="newsletterMessage">No spam. Just the good stuff.</small></form></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home" aria-label="REVELIA home"><span class="brand-mark">R</span><span>REVELIA<span class="brand-dot">.</span></span></a><p>Go out. Get inspired. Repeat.</p><div>© <span id="year"></span> REVELIA · Made for curious minds</div></footer>
+
+  <div class="modal-backdrop" id="eventModal" aria-hidden="true">
+    <section class="modal event-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close event details">×</button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="registrationModal" aria-hidden="true">
+    <section class="modal registration-modal" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+      <button class="modal-close" data-close aria-label="Close registration">×</button>
+      <div class="modal-kicker">SAVE YOUR SPOT</div><h2 id="registrationTitle">You're one step<br>from <span class="highlight">showing up.</span></h2><p class="form-intro">Fill in your details and we'll save your registration locally for this demo.</p>
+      <form id="registrationForm" novalidate>
+        <input type="hidden" id="selectedEventId">
+        <label for="participantName">Full name <span>*</span></label><input id="participantName" name="name" type="text" placeholder="e.g. Alex Morgan" autocomplete="name" required minlength="2">
+        <div class="field-error" id="nameError"></div>
+        <label for="participantEmail">Email address <span>*</span></label><input id="participantEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <div class="field-error" id="emailError"></div>
+        <label for="participantPhone">Phone number <span>*</span></label><input id="participantPhone" name="phone" type="tel" placeholder="10-digit mobile number" autocomplete="tel" required inputmode="numeric">
+        <div class="field-error" id="phoneError"></div>
+        <label for="registrationEvent">Selected event <span>*</span></label><select id="registrationEvent" name="event" required></select>
+        <div class="field-error" id="eventError"></div>
+        <label class="consent-row"><input type="checkbox" id="consent" required><span>I confirm that the information above is correct.</span></label><div class="field-error" id="consentError"></div>
+        <button class="button button-primary submit-button" type="submit">Confirm registration <span>↗</span></button>
+        <p class="privacy-note">Demo project: registrations are stored in this browser only.</p>
+      </form>
+      <div class="success-panel" id="successPanel" hidden><div class="success-icon">✓</div><h3>You're on the list!</h3><p id="successMessage"></p><p class="registration-reference" id="registrationReference"></p><button class="button button-dark" id="successDone">Back to exploring</button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
